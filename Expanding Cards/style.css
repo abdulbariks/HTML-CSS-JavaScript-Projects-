@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+}
+
+.one{
+     background: url(img/one.jpg);
+}
+.two{
+     background: url(img/two.jpg);
+}
+.three{
+      background: url(img/three.jpg);
+}
+.four{
+       background: url(img/four.jpg);
+}
+.five{
+      background: url(img/five.jpg);
+}
+
+
+.section{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    cursor: pointer;
+    flex: 0.2;
+    margin: 8px;
+    position: relative;
+    transition: all 0.7s ease-out;
+    border-radius: 50px;
+}
+
+.section.active{
+    flex: 3;
+}
+
+
+@media(max-width:480px){
+    .container{
+        width: 100vw;
+    }
+
+    .section:nth-of-type(2),
+    .section:nth-of-type(3),
+    .section:nth-of-type(5){
+        display: none;
+    }
+}
